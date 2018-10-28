@@ -17,7 +17,7 @@ twitter_oauth = OAuth1Session(TCK, TCS, TAT, TATS)
 get_timeline_url = "https://api.twitter.com/1.1/statuses/home_timeline.json"
 search_tweet_word_url = "https://api.twitter.com/1.1/search/tweets.json?"
 get_specific_tweet_by_id = "https://api.twitter.com/1.1/statuses/user_timeline.json?"
-post_line_url = "https://notify-api.line.me/api/notify"
+post_line_notify_url = "https://notify-api.line.me/api/notify"
 
 tokyu_id = "1199983754"
 seibu_id = "275509479"
@@ -68,4 +68,4 @@ def post_line_message(token, url, word):
 get_train_information = get_specific_tweet(twitter_oauth, get_specific_tweet_by_id, seibu_id)
 print(get_train_information)
 
-post_line_message(LT, post_line_url, get_train_information)
+post_line_message(LT, post_line_notify_url, get_train_information)
